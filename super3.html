@@ -1,0 +1,258 @@
+   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CROCNAV - The Future</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            cursor: none;
+        }
+
+        body {
+            background: black;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            perspective: 1000px;
+        }
+
+        /* Glowing Cursor */
+        .cursor {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            transition: transform 0.1s ease-out, background 0.2s ease-out;
+            pointer-events: none;
+            mix-blend-mode: difference;
+        }
+
+        .cursor.click {
+            transform: scale(2);
+            background: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Background Grid Animation */
+        .background-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/cubes.png');
+            opacity: 0.05;
+            z-index: -1;
+            animation: moveBackground 10s linear infinite alternate;
+        }
+
+        @keyframes moveBackground {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-50px, -50px); }
+        }
+
+        /* Floating Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Glitching & Morphing CROCNAV Title */
+        .title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            position: relative;
+            animation: glitch 1.5s infinite alternate, morphText 3s infinite alternate;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 3px 3px 10px rgba(255, 0, 0, 0.5); }
+            100% { text-shadow: -3px -3px 15px rgba(0, 255, 255, 0.8); }
+        }
+
+        @keyframes morphText {
+            0% { letter-spacing: 2px; }
+            100% { letter-spacing: 6px; }
+        }
+
+        h4 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            background: linear-gradient(90deg, #ffdd00, #ff00ff, #00ffff);
+            -webkit-background-clip: text;
+            color: transparent;
+            animation: glowShift 3s infinite alternate, floatText 2s infinite ease-in-out;
+        }
+
+        /* Scroll Down Note */
+        .scroll-note {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.6);
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0.4; }
+        }
+
+        /* Floating Modules Section */
+        .container {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .modules {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            perspective: 1200px;
+        }
+
+        /* Module with 3D Floating Effect */
+        .module-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+            transform: rotateY(0);
+            transition: transform 0.5s, box-shadow 0.5s, background 0.3s;
+            position: relative;
+            overflow: hidden;
+            animation: floatModule 3s infinite ease-in-out alternate;
+        }
+
+        .module-card:hover {
+            transform: scale(1.1) rotateY(10deg);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes floatModule {
+            0% { transform: translateY(0px); }
+            100% { transform: translateY(-5px); }
+        }
+
+        /* OPSEC Special Animation */
+        .opsec {
+            border: 2px solid #ffdd00;
+            box-shadow: 0 0 15px #ffdd00;
+            animation: flicker 0.5s infinite alternate;
+        }
+
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.8; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cursor"></div>
+    <div class="background-grid"></div>
+
+    <div class="hero">
+        <header>
+            
+            <h1 class="title">CROCNAV</h1>
+            <h4>BY ABHINAV</h4>
+            <p class="scroll-note">Scroll Down ⬇️</p>
+        </header>
+    </div>
+
+    <div class="container">
+        <h2>Course Modules</h2>
+        <div class="modules">
+            <div class="module-card">01 - Ethical Hacking Basics</div>
+            <div class="module-card">02 - Setting Up a Lab</div>
+            <div class="module-card">03 - Linux Mastery</div>
+            <div class="module-card">04 - Python for Hackers</div>
+            <div class="module-card">05 - Networking Deep Dive</div>
+            <div class="module-card">06 - Web App Exploits</div>
+            <div class="module-card opsec">07 - OPSEC & Anonymity</div>
+            <div class="module-card">08 - WiFi Hacking</div>
+            <div class="module-card">09 - Password Cracking</div>
+            <div class="module-card">10 - Reverse Engineering</div>
+            <div class="module-card">11 - Windows Exploits</div>
+            <div class="module-card">12 - Malware Analysis</div>
+            <div class="module-card">13 - Social Engineering</div>
+            <div class="module-card">14 - Cryptography</div>
+            <div class="module-card">15 - Bug Bounty</div>
+            <div class="module-card">16 - Android Hacking</div>
+            <div class="module-card">17 - Exploit Development</div>
+            <div class="module-card">18 - AI in Cybersecurity</div>
+            <div class="module-card">19 - IoT Hacking</div>
+            <div class="module-card">20 - Red Team Operations</div>
+        </div>
+    </div>
+      <footer>
+    <div class="footer-container">
+        <p>Contact: <a href="https://www.instagram.com/crocatto_main" target="_blank">@crocatto_main</a></p>
+        <p>&copy; 2025 CROCNAV. All rights reserved.</p>
+    </div>
+</footer>
+
+<style>
+    footer {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        text-align: center;
+        padding: 20px;
+        margin-top: 50px;
+        font-size: 14px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .footer-container a {
+        color: #ffdd00;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .footer-container a:hover {
+        color: #00ffff;
+    }
+
+    /* Subtle Floating Animation */
+    .footer-container p {
+        animation: floatText 3s infinite alternate;
+    }
+
+    @keyframes floatText {
+        0% { transform: translateY(0px); }
+        100% { transform: translateY(-3px); }
+    }
+</style>
+    <script>
+        /* Custom Cursor */
+        const cursor = document.querySelector('.cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+        });
+
+        document.addEventListener('mousedown', () => cursor.classList.add('click'));
+        document.addEventListener('mouseup', () => cursor.classList.remove('click'));
+    </script>
+
+</body>
+</html>

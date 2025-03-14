@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Operations Masterclass - CROCNAV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- General Styles --- */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 85%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* --- Header Styles --- */
+        header {
+            background: #333;
+            color: white;
+            padding: 20px 0;
+            position: relative;
+            z-index: 100;
+        }
+
+        header .logo {
+            float: left;
+            font-size: 2em;
+            font-weight: 700;
+            color: #4CAF50; /* Green logo color */
+        }
+
+        header nav {
+            float: right;
+        }
+
+        header nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        header nav ul li {
+            display: inline;
+            margin-left: 30px;
+        }
+
+        header nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:hover {
+            color: #4CAF50; /* Green hover color */
+        }
+
+        /* --- Course Details Section --- */
+        #course-details {
+            padding: 50px 0;
+            background: #fff;
+        }
+
+        #course-details h1 {
+            font-size: 2.5em;
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #course-details .content {
+            padding: 0 20px;
+        }
+
+        #course-details p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+         #course-details ul {
+            list-style: disc;
+            padding-left: 30px;
+            margin-bottom: 20px;
+        }
+
+        #course-details li {
+            font-size: 1.1em;
+            line-height: 1.8;
+        }
+
+        /* --- Prerequisites Section --- */
+        #prerequisites {
+            background: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        #prerequisites h2 {
+            font-size: 2em;
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #prerequisites p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            padding: 0 20px;
+        }
+
+        /* --- Course Modules Section --- */
+        #course-modules {
+            background: #fff;
+            padding: 50px 0;
+        }
+
+        #course-modules h2 {
+            font-size: 2em;
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #course-modules ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        #course-modules li {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            border-radius: 5px;
+        }
+
+        /* --- Footer Styles --- */
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+        }
+
+        /* --- Responsive Design --- */
+        @media(max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">CROCNAV</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="course-details">
+        <div class="container">
+            <h1>Cyber Operations Masterclass</h1>
+            <div class="content">
+                <p>Welcome to the Cyber Operations Masterclass, an elite program designed to transform you into a cybersecurity leader. This masterclass provides comprehensive knowledge and practical experience in cyber operations, covering advanced topics such as network security, system administration, incident response, and threat intelligence.</p>
+
+                <p><b>What You'll Learn:</b></p>
+                <ul>
+                    <li>Mastering advanced techniques in network security and system administration.</li>
+                    <li>Developing expertise in incident response and threat intelligence.</li>
+                    <li>Understanding and implementing cybersecurity frameworks.</li>
+                    <li>Conducting advanced penetration testing and vulnerability assessments.</li>
+                    <li>Managing and leading cybersecurity teams.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="course-modules">
+        <div class="container">
+            <h2>Course Modules</h2>
+            <ul>
+                <li><b>Module 1: Advanced Network Security:</b> Securing network infrastructure and implementing advanced security protocols.</li>
+                <li><b>Module 2: System Administration and Hardening:</b> Configuring and securing operating systems and servers.</li>
+                <li><b>Module 3: Incident Response and Handling:</b> Responding to and managing cybersecurity incidents.</li>
+                <li><b>Module 4: Threat Intelligence and Analysis:</b> Gathering and analyzing threat intelligence data.</li>
+                <li><b>Module 5: Cybersecurity Leadership:</b> Leading and managing cybersecurity teams and projects.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="prerequisites">
+        <div class="container">
+            <h2>Prerequisites</h2>
+            <p>This masterclass is designed for experienced cybersecurity professionals. A strong understanding of networking, system administration, and security concepts is required.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 CROCNAV. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
